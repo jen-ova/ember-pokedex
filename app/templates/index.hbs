@@ -1,0 +1,6 @@
+{{page-title 'EmberPokedex'}}
+<div class='poke-list'>
+  {{#each @model as |pokemon|}}
+    <Pokemon @pokemon={{pokemon}} />
+  {{/each}}
+</div>
