@@ -19,8 +19,17 @@ export default class IndexRoute extends Route {
       detailedPokemon.push(pokeData);
     }
 
-    console.log(detailedPokemon);
-    console.log(detailedPokemon[0].name);
-    return detailedPokemon;
+    const uniquePokes = Object.values(
+      detailedPokemon.reduce(
+        (acc, pokemon) =>
+          Object.assign(acc, { [pokemon.species.name]: pokemon }),
+        {}
+      )
+    ).filter(
+      (pokemon) =>
+        pokemon.sprites.other['official-artwork'].front_default !== null
+    );
+
+    return uniquePokes;
   }
 }

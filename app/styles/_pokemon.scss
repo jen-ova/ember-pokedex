@@ -3,3 +3,17 @@
   background-color: #141414;
   color: white;
 }
+
+.poke-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+img {
+  width: 250px;
+  height: auto;
+  margin: 4rem;
+  filter: drop-shadow(2px 0 0 white) drop-shadow(0 2px 0 white)
+    drop-shadow(-2px 0 0 white) drop-shadow(0 -2px 0 white);
+}
